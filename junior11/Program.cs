@@ -1,11 +1,14 @@
 ﻿Random rand = new Random();
-int number = rand.Next(101);
+int randomNumber = 101;
+int number = rand.Next(randomNumber);
+int firstNumber = 3;
+int lastNumber = 5;
 int sum = 0;
 
 for (int i = 0; i <= number; i++)
 {
-    if (i % 3 == 0 || i % 5 == 0) sum += i;
+    if (i % firstNumber == 0 || i % lastNumber == 0) sum += i;
 }
 
 Console.WriteLine($"Число {number}");
-Console.WriteLine($"Сумма положительных чисел меньше {number}, кратных 3 или 5 {sum}");
+Console.WriteLine($"Сумма положительных чисел меньше {number}, кратных {firstNumber} или {lastNumber}: {sum}");
